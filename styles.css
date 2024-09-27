@@ -1,0 +1,100 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    color: #FFF;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.album-art img {
+    width: 100%;
+    border-radius: 10px;
+    transition: opacity 0.5s ease-in-out; /* Fade in/out animation */
+    opacity: 0;
+}
+
+.album-art img.loaded {
+    opacity: 1;
+}
+
+.controls button {
+    background: none;
+    border: none;
+    color: #FFF;
+    font-size: 2rem;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.controls button:hover {
+    transform: scale(1.2);
+}
+
+#play-pause-btn {
+    transition: all 0.3s ease;
+}
+
+#play-pause-btn:active {
+    transform: scale(1.1) rotate(15deg); /* Animação ao clicar */
+}
+
+#prev-btn, #next-btn {
+    transition: transform 0.3s ease;
+}
+
+#prev-btn:active, #next-btn:active {
+    transform: scale(1.1) translateY(-5px); /* Bounce animation */
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+}
+
+#progress {
+    width: 80%;
+    margin-right: 10px;
+    transition: width 0.5s ease-in-out; /* Animação suave na barra */
+}
+
+#playlist li {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#playlist li:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateX(10px); /* Animação de deslocamento ao passar o mouse */
+}
+
+.track-info {
+    text-align: center;
+    margin-top: 10px;
+    transition: opacity 0.5s ease-in-out; /* Fade-in ao trocar faixa */
+    opacity: 0;
+}
+
+.track-info.active {
+    opacity: 1;
+}
